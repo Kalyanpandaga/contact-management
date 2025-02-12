@@ -4,6 +4,7 @@ import Storage from "../storages/storage.js";
 
 const getAllContactsController = async (req, res) => {
   const storage = new Storage();
+  console.log("COming ...................");
   const interactor = new GetAllContactsInteractor(storage);
 
   const presenter = new GetAllContactsPresenter(res);

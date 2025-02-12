@@ -87,6 +87,25 @@ class Storage {
       new: true,
     });
   }
+
+  async getContactsBySearch(name = "", email = "") {
+    const searchQuery = {};
+    if (name) searchQuery.name = { $regex: name, $options: "i" };
+    if (email) searchQuery.email = { $regex: email, $options: "i" };
+
+    const contacts = await Contact.find(searchQuery).select(
+      "name email phone address createdAt"
+    );
+
+    return contacts.map((contact) => ({
+      id: contact._id.toString(),
+      name: contact.name,
+      email: contact.email,
+      phoneNumber: contact.phone,
+      address: contact.address || "",
+      createdAt: contact.createdAt,
+    }));
+  }
 }
 
 export default Storage;

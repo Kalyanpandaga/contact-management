@@ -1,21 +1,11 @@
-class DeleteContactPresenter {
-  constructor(res) {
-    this.res = res;
-  }
+import BasePresenter from "./basePresenter.js";
 
+class DeleteContactPresenter extends BasePresenter {
   deleteContactPresenterResponse() {
-    this.res.status(200).json({
-      statusCode: 200,
+    this.res.status(204).json({
+      statusCode: 204,
       status: "SUCCESS",
       message: "Contact deleted successfully.",
-    });
-  }
-
-  invalidContactIdPresenterResponse() {
-    this.res.status(400).json({
-      statusCode: 400,
-      status: "INVALID_CONTACT_ID",
-      message: "Invalid contact ID.",
     });
   }
 }

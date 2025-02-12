@@ -1,8 +1,6 @@
-class GetContactsPresenter {
-  constructor(res) {
-    this.res = res;
-  }
+import BasePresenter from "./basePresenter.js";
 
+class GetContactsPresenter extends BasePresenter {
   getAllContactsPresenterResponse = (contacts) => {
     const contactsData = {
       contacts: contacts,
