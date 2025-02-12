@@ -1,0 +1,33 @@
+{
+  "name": "contact-management",
+  "version": "1.0.0",
+  "description": "Contact Management Applicationwill allow users to manage their contacts, including adding,",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalyanpandaga/contact-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalyanpandaga/contact-management/issues"
+  },
+  "homepage": "https://github.com/Kalyanpandaga/contact-management#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
