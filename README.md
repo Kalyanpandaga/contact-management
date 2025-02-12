@@ -6,7 +6,11 @@ The Contact Management API allows users to create, retrieve, update, delete, and
 
 ### **Base URL:**
 
-`https://contact-management-y4of.onrender.com`
+`https://contact-management-y4of.onrender.com/api`
+
+### **Example Create Contact URL:**
+
+`https://contact-management-y4of.onrender.com/api/contacts`
 
 ## Authentication
 
